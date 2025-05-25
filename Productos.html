@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" href="logo.jpg">
+    <link rel="stylesheet" href="produc.css">
+</head>
+<body>
+
+    <header class="header">  
+        <div class="menu container">
+            <a href="#" class="logo">Services S.A</a>
+            <input type="checkbox" id="menu"/>
+            <label for="menu">
+                <img src="IMG/menu.png" class="menu-icono" alt="menu">
+            </label>
+            <nav class="navbar">
+                <ul>                    
+                    <li><a style="font-weight: bold; font-size: 19px;" href="index.html">Inicio</a></li>
+                    <li><a style="font-weight: bold; font-size: 19px;"href="Servicios.html">Servicios</a></li>
+                    <li><a style="font-weight: bold; font-size: 19px;"href="Informacion_Equipo.html">Nosotros</a></li>
+                    <li><a style="font-weight: bold; font-size: 19px;"href="tel:50243987861">Contacto</a></li>
+                </ul>
+            </nav>
+
+            <div>
+                <ul>
+                    <li class="submenu">
+                        <img src="IMG/car.svg" id="img-carrito" alt="carrito">
+                        <div id="carrito">
+                            <table id="lista-carrito">
+                                <thead>
+                                    <tr>
+                                        <th>Imagen</th>
+                                        <th>Nombre</th>
+                                        <th>Precio</th>
+                                    </tr>
+                                </thead>
+                                <tbody></tbody>
+                            </table>
+                            <a href="#" id="vaciar-carrito" class="btn-2">Vaciar carrito</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>  
+        
+        <div class="header-content container">
+            <div class="header-img">
+                <img src="IMG/right.png" alt="">
+            </div>
+            <div class="header-txt">
+                <h1>Ofertas especiales</h1>
+                <p>En la compra de nuestros produtos</p>
+                <a href="#" class="btn-1">Informacion</a>
+            </div>        
+        </div>
+    </header>   
+    
+    <section class="ofert container">
+        <div class="ofert-1">
+            <div class="ofert-img">
+                <img src="check.jpeg" alt="">
+            </div>
+            <div class="ofert-txt">
+                <h3>Producto 1</h3>
+                <a href="#" class="btn-2">Informacion</a>
+            </div>
+        </div>
+        <div class="ofert-1">
+            <div class="ofert-img">
+                <img src="check.jpeg" alt="">
+            </div>
+            <div class="ofert-txt">
+                <h3>Producto 2</h3>
+                <a href="#" class="btn-2">Informacion</a>
+            </div>
+        </div>
+        <div class="ofert-1">
+            <div class="ofert-img">
+                <img src="check.jpeg" alt="">
+            </div>
+            <div class="ofert-txt">
+                <h3>Producto 3</h3>
+                <a href="#" class="btn-2">Informacion</a>
+            </div>
+        </div>
+    </section>
+
+    <main class="products container" id="lista-1">
+        <h2>Cámaras</h2>
+        
+        <div class="product-content">
+            <div class="product">
+                <img src="Productos/Producto_1.jpg" alt=""  style="width: 160px; height: 80px;">
+                <div class="product-txt">
+                    <br>              
+                    <h3> Cámara Mini-Bala</h3>
+                    <p>Marca: HIKVISION</p>
+                    <p>Modelo: DS-2CE16D0T-IRPF</p>
+                    <p><b>Sobre la camara</b></p>
+                    <li  class="lista-txt-ul">
+                        <ul class="lista-producto-txt">•	Cámara tipo mini bala 2MP </ul>
+                        <ul class="lista-producto-txt">•	Salida analógica HD, <br> resolución 1920p *1080p. </ul>
+                        <ul class="lista-producto-txt">•	Hasta 20m de visión nocturna. </ul>
+                        <ul class="lista-producto-txt">•	IP66 resistente a la intemperie. </ul>
+                        <ul class="lista-producto-txt">•   TVI / AHD / CVI / CVBS.    </ul>
+                    </li>                                                                                                                                 
+                    <p class="precio">Q 156.99</p>
+                    <a href="#" class="agregar-carrito btn-2" data-id="1">agregar carrito</a>
+                </div>
+            </div>
+            <div class="product">
+                <img src="Productos/Producto_2.jpg" alt="" style="width: 80px; height: 100px;">
+                <div class="product-txt">
+                    <h3>Cámara Domo</h3>
+                    <p>Marca: HIKVISION</p>   
+                    <p>Modelo: DS-2CE56D0T-IRMF(C)</p>
+                    <p><b>Sobre la camara</b></p>  
+                    <li class="lista-txt-ul">
+                        <ul class="lista-producto-txt">•	Cámara tipo Domo 2MP.</ul>
+                        <ul class="lista-producto-txt">•	Salida analógica HD, resolución 1920p *1080p. </ul>
+                        <ul class="lista-producto-txt">•	Hasta 25m de visión nocturna. </ul>
+                        <ul class="lista-producto-txt">•	IP67 resistente al agua. </ul>
+                        <ul class="lista-producto-txt">•	TVI / AHD / CVI / CVBS.   </ul>
+                    </li>                                                                                                                                                                          
+                    <p class="precio">Q 170.99</p>
+                    <br>    
+                    <a href="#" class="agregar-carrito btn-2" data-id="2">agregar carrito</a>
+                </div>
+            </div>
+
+            <div class="product">
+                <img src="Productos/Producto_3.jpg" alt=""  style="width: 80px; height: 95px;">
+                <div class="product-txt">
+                    <h3>Nombre:  Cámara IP tipo Mini-Bala 
+                        Powered by Dark-Fighter  
+                    </h3>
+                    <p>Marca: Hikvision</p>
+                    <p>Modelo: DS-2CD2085G1-I</p>
+                    <p><b>Sobre la camara</b></p> 
+                    <li class="lista-txt-ul">
+                        <ul class="lista-producto-txt">•	Cámara tipo Bala 8MP (4K). </ul>  
+                        <ul class="lista-producto-txt">•	Salida: IP red  <br>resolución 3840p * 2160p.</ul>   
+                        <ul class="lista-producto-txt">•	IP 67 con estructura <br> robusta de material metálico <br> Imágenes nítidas</ul>                                                                      
+                    </li>                                                                                                                                                      
+                    <p class="precio">Q 1970.99</p>                    
+                    <a href="#" class="agregar-carrito btn-2" data-id="3">agregar carrito</a>
+                </div>
+            </div>
+
+            <div class="product">
+                <img src="Productos/Producto_4.png" alt="" style="width: 100px; height: 80px;">
+                <div class="product-txt">
+                    <h3>Nombre: Cámara Bala IP</h3>
+                    <p>Marca: HIKVISION</p>
+                    <p>Modelo: DS-2CD1023G0E-I</p>  
+                    <p><b>Sobre la camara</b></p>  
+                    <li class="lista-txt-ul">
+                        <ul class="lista-producto-txt">•	Cámara tipo Bala 2MP.</ul>
+                        <ul class="lista-producto-txt">•	Salida: IP red resolución 3840p * 2160p.</ul>
+                        <ul class="lista-producto-txt">•	IP 67 resistente al agua.</ul>
+                        <ul class="lista-producto-txt">•	Imágenes nítidas con luz de <br>fondo intensa gracias <br> a la tecnología WDR. </ul>
+                    </li>                                                                                                                                                                                                                            
+                    <p class="precio">Q 456.99 <br></p>
+                    <br>
+                    <p></p>
+                    <br>
+                    <p></p>
+                    <br>
+                    <p></p>
+                    <br>                    
+                    <a href="#" class="agregar-carrito btn-2" data-id="4">agregar carrito</a>
+                </div>
+            </div>
+            <div class="product">
+                <img src="Productos/Producto_5.png" alt="" style="width: 120px; height: 120px;">
+                <div class="product-txt">
+                    <h3>Nombre:  Cámara Ip tipo Bala</h3>
+                    <p>Marca: HIKVISION</p>
+                    <p>Modelo:   DS-2CD1043G2-LIU(F)</p>
+                    <p><b>Sobre la camara</b></p>
+                    <li class="lista-txt-ul">
+                        <ul class="lista-producto-txt">•   Cámara tipo bala 4MP</ul>                       
+                        <ul class="lista-producto-txt">•   Smart Hybrid Light: tecnología avanzada con largo alcance</ul>
+                        <ul class="lista-producto-txt">•   Micrófono incorporado</ul>
+                        <ul class="lista-producto-txt">•   Resistente al agua <br> y al polvo (IP67)</ul>                       
+                        <ul class="lista-producto-txt">•   Tecnología de compresión <br> H.265+ eficiente </ul>
+                    </li>                                                                                                                                                                       
+                    <p class="precio">Q 555.99</p>               
+                    <br>     
+                    <a href="#" class="agregar-carrito btn-2" data-id="5">agregar carrito</a>
+                </div>
+            </div>
+            <div class="product">
+                <img src="Productos/Producto_6.jpg" alt=""  style="width: 80px; height: 80px;">
+                <div class="product-txt">
+                    <h3>Nombre: Cámara IP tipo Domo Powered by Dark-Fighter</h3>
+                    <p>Marca: HIKVISION</p>
+                    <p>Modelo: DS-2DE4415IW-DE(T5)</p>
+                    <p><b>Sobre la camara</b></p>  
+                    <li class="lista-txt-ul">
+                       <ul  class="lista-producto-txt">•	Cámara PTZ 4MP.</ul>
+                       <ul  class="lista-producto-txt">•	Salida: IP red, <br> resolución 2560p * 1440p.</ul> 
+                       <ul  class="lista-producto-txt">•	Admite captura de <br> rostros. Captura hasta <br> 5 rostros simultáneamente.</ul>                       
+                       <ul  class="lista-producto-txt">•	Zoom óptico de 15× <br> y  zoom digital de 16×. </ul>
+                       <ul  class="lista-producto-txt">•	Vista nocturna hasta 100m.</ul>
+                       <ul  class="lista-producto-txt">•	Admite compresión de vídeo H.265+/H.265.</ul>
+                    </li>
+                    <p class="precio">Q 4632.99 </p>                                   
+                    <a href="#" class="agregar-carrito btn-2" data-id="6">agregar carrito</a>
+                </div>
+            </div>
+            <br> 
+            <br>
+            <h2>DVR  Y NVR</h2> 
+            <br>           
+            <div class="product">
+                <img src="Productos/Producto_1.1.jpg" alt=""  style="width: 90px; height: 95px;">
+                <div class="product-txt">
+                    <h3>Nombre: 4-ch 1080p 
+                        Lite Mini 1U H.265 DVR  
+                    </h3>
+                    <p>Marca: Hikvision</p>
+                    <p>Modelo: DS-7104HGHI-K1</p>
+                    <p><b>Sobre el Producto</b></p> 
+                    <li class="lista-txt-ul">
+                        <ul class="lista-producto-txt">•	H.265 y compresión de <br> video de doble flujo.</ul>  
+                        <ul class="lista-producto-txt">•	Admite cámaras HD-TVI / <br> y AHD con acceso adaptable..</ul>   
+                        <ul class="lista-producto-txt">•	Entrada de cámaras <br>analógicas de hasta <br> 4 canales</ul>
+                        <ul class="lista-producto-txt">•	Salida HDMI y VGA <br> a una resolución <br> de hasta 1920 × 1080P.</ul>                                                                      
+                    </li>                                                                                                                                                      
+                    <p class="precio">Q 390.99</p>                    
+                    <a href="#" class="agregar-carrito btn-2" data-id="3">agregar carrito</a>
+                </div>
+            </div>
+            <div class="product">
+                <img src="Productos/Producto_1.2.jpg" alt=""  style="width: 90px; height: 95px;">
+                <div class="product-txt">
+                    <h3>Nombre 8-ch 1080p
+                         Lite Mini 1U H.265 DVR 
+                    </h3>
+                    <p>Marca: Hikvision</p>
+                    <p>Modelo: DS-7108HGHI-K1</p>
+                    <p><b>Sobre el producto</b></p> 
+                    <li class="lista-txt-ul">
+                        <ul class="lista-producto-txt">•	Admite compresión <br> de video H.265+ </ul>  
+                        <ul class="lista-producto-txt">•	Admite entrada de <br>video HDTVI / AHD <br> CVI / CVBS / IP</ul>   
+                        <ul class="lista-producto-txt">•	Entrada de cámara <br> analogicas de hasta 8 canales</ul> 
+                        <ul class="lista-producto-txt">•	Salida HDMI y VGA <br> a una resolución <br>de hasta 1920 × 1080P.</ul>                                                                      
+                    </li>                                                                                                                                                      
+                    <p class="precio">Q 610.00</p>                    
+                    <a href="#" class="agregar-carrito btn-2" data-id="3">agregar carrito</a>
+                </div>
+            </div>
+            <div class="product">
+                <img src="Productos/Producto_1.3.jpg" alt=""  style="width: 90px; height: 95px;">
+                <div class="product-txt">
+                    <h3>Nombre: 16-ch 1080p 
+                        Lite 1U H.265 DVR 
+                    </h3>
+                    <p>Marca: Hikvision</p>
+                    <p>Modelo:  DS-7116HGHI-M1(S)</p>
+                    <p><b>Sobre el producto</b></p> 
+                    <li class="lista-txt-ul">
+                        <ul class="lista-producto-txt">•	Tecnología TurboHD 1080P Lite Ver. 4.0</ul>  
+                        <ul class="lista-producto-txt">•	Soporte de tecnologías: <br> HD-TVI / HD-CVI / AHD <br> Analógico (CVBS).</ul>  
+                        <ul class="lista-producto-txt">•	Software cliente iVMS-4200.</ul>   
+                        <ul class="lista-producto-txt">•	Compatible con Hik-Connect P2P</ul>                                                                      
+                    </li>                                                                                                                                                      
+                    <p class="precio">Q 700.00</p> 
+                    <br>
+                    <p></p>                   
+                    <a href="#" class="agregar-carrito btn-2" data-id="3">agregar carrito</a>
+                </div>
+            </div>  
+            <div class="product">
+                <img src="Productos/Producto_1.4.png" alt=""  style="width: 90px; height: 95px;">
+                <div class="product-txt">
+                    <h3>Nombre:  NVR Hikvision
+                         16 Canales PoE 
+                    </h3>
+                    <p>Marca: Hikvision</p>
+                    <p>Modelo:  DS-7616NI-K2/16P</p>
+                    <p><b>Sobre el producto</b></p> 
+                    <li class="lista-txt-ul">
+                        <ul class="lista-producto-txt">•	Entradas de cámara IP <br> de hasta 16 canales PoE</ul>  
+                        <ul class="lista-producto-txt">•	Formatos de vídeo <br> H.265+/H.265/H.264+/H.264</ul> 
+                        <ul class="lista-producto-txt">•	2 interfaces SATA para <br> conexión HDD (hasta 10 <br>TB de capacidad por HDD)</ul>   
+                        <ul class="lista-producto-txt">•	Hasta 160 Mbps de <br>ancho de banda entrante</ul>                                                                      
+                    </li>                                                                                                                                                      
+                    <p class="precio">Q 2793.99</p>  
+                    <br>
+                    <p></p>                  
+                    <a href="#" class="agregar-carrito btn-2" data-id="3">agregar carrito</a>
+                </div>
+            </div>
+            <div class="product">
+                <img src="Productos/Producto_1.5.jpg" alt=""  style="width: 90px; height: 95px;">
+                <div class="product-txt">
+                    <h3>Nombre:  NVR de 32
+                         Canales Hasta 8mp  
+                    </h3>
+                    <p>Marca: Hikvision</p>
+                    <p>Modelo: DS-2CD2085G1-I</p>
+                    <p><b>Modelo:  DS-7732NI-K4 </b></p> 
+                    <li class="lista-txt-ul">
+                        <ul class="lista-producto-txt">•	Entradas de cámara IP de hasta 32 canales</ul>  
+                        <ul class="lista-producto-txt">•	Grabación de resolución de hasta 8 megapíxeles </ul>  
+                        <ul class="lista-producto-txt">•	Admite HDMI de 1 canal, <br>VGA de 1 canal, HMDI a <br> una resolución de hasta 4K (3840x2160)
+                        <ul class="lista-producto-txt">•	4 interfaces SATA <br> Hasta 10 TB de capacidad <br> para cada HDD </ul>                                                                      
+                    </li>                                                                                                                                                      
+                    <p class="precio">Q 1970.99</p>                                        
+                    <a href="#" class="agregar-carrito btn-2" data-id="3">agregar carrito</a>
+                </div>
+            </div>
+            <div class="product">
+                <img src="Productos/Producto_1.5.jpg" alt=""  style="width: 90px; height: 95px;">
+                <div class="product-txt">
+                    <h3>Nombre:  Cámara IP tipo Mini-Bala 
+                        Powered by Dark-Fighter  
+                    </h3>
+                    <p>Marca: Hikvision</p>
+                    <p>Modelo: DS-2CD2085G1-I</p>
+                    <p><b>Sobre la camara</b></p> 
+                    <li class="lista-txt-ul">
+                        <ul class="lista-producto-txt">•	Cámara tipo Bala 8MP (4K). </ul>  
+                        <ul class="lista-producto-txt">•	Salida: IP red  <br>resolución 3840p * 2160p.</ul>   
+                        <ul class="lista-producto-txt">•	IP 67 con estructura <br> robusta de material metálico <br> Imágenes nítidas</ul>                                                                      
+                    </li>                                                                                                                                                      
+                    <p class="precio">Q 1970.99</p>                    
+                    <a href="#" class="agregar-carrito btn-2" data-id="3">agregar carrito</a>
+                </div>
+            </div>
+            <br> 
+            <br>
+            <h2>Accesorios</h2> 
+            <br>  
+            <div class="product">
+                <img src="Productos/Accesorio_1.jpg" alt=""  style="width: 90px; height: 95px;">
+                <div class="product-txt">
+                    <h3>Video Balum activo con
+                         audio TT-101-PVD-TURBO  
+                    </h3>                   
+                    <p><b>Sobre el accesorio</b></p> 
+                    <li class="lista-txt-ul">
+                        <ul class="lista-producto-txt">Kit de transceptores activos con  <br>
+                                                       alimentación 12V/24VCD/AC, video y <br>
+                                                       datos de un canal TurboHD para aplicaciones <br>
+                                                       de video por UTP cat5e/6 en alta definición</ul>  
+                    </li>                                                                                                                                                      
+                    <p class="precio">Q 160.99</p>                    
+                    <a href="#" class="agregar-carrito btn-2" data-id="3">agregar carrito</a>
+                </div>
+            </div>
+            <div class="product">
+                <img src="Productos/Accesorio_2.jpg" alt=""  style="width: 90px; height: 95px;">
+                <div class="product-txt">
+                    <h3>Video Balón Pasivo</h3>                                    
+                    <p><b>Sobre el accesorio</b></p> 
+                    <p><br></p>    
+                    <li class="lista-txt-ul">
+                        <ul class="lista-producto-txt">Par de Video Balun BNC Pasivo <br>
+                                                       para Cámara de Seguridad CCTV, <br>Transceptor, 5MP AHD</ul>                                                                        
+                    </li>                                                                                                                                                      
+                    <p class="precio">Q 25.99</p>    
+                    <p><br></p>                    
+                    <a href="#" class="agregar-carrito btn-2" data-id="3">agregar carrito</a>
+                </div>
+            </div>
+            <div class="product">
+                <img src="Productos/Accesorio_3.jpg" alt=""  style="width: 90px; height: 95px;">
+                <div class="product-txt">
+                    <h3>Adaptador AC-DC de 12V 1A
+                    </h3>                
+                    <p><b>Sobre la camara</b></p> 
+                    <p><br></p>    
+                    <li class="lista-txt-ul">
+                        <ul class="lista-producto-txt">•	Voltaje de salida : 12V DC </ul>  
+                        <ul class="lista-producto-txt">•	Corriente máxima de salida : 1 A</ul>   
+                        <ul class="lista-producto-txt">•	Conector DC 5.5mm x 2.5mm</ul>                                                                      
+                    </li>         
+                    <p><br></p>                                                                                                                                                 
+                    <p class="precio">Q 39.99</p>                    
+                    <a href="#" class="agregar-carrito btn-2" data-id="3">agregar carrito</a>
+                </div>
+            </div>
+            <div class="product">
+                <img src="Productos/Accesorio_4.jpg" alt=""  style="width: 90px; height: 95px;">
+                <div class="product-txt">
+                    <h3>Adaptador AC-DC N.A. 12V 2A 
+                    </h3>                    
+                    <p><b>Sobre el accesorio</b></p> 
+                    <li class="lista-txt-ul">
+                        <ul class="lista-producto-txt">•	Voltaje de salida: 12V D </ul>  
+                        <br>
+                        <ul class="lista-producto-txt">•	Corriente máxima de salida: 2 A</ul>   
+                    </li>                                                                                                                                                      
+                    <p class="precio">Q 64.00</p>    
+                    <br>                
+                    <a href="#" class="agregar-carrito btn-2" data-id="3">agregar carrito</a>
+                </div>
+            </div>
+            <div class="product">
+                <img src="Productos/Accesorio_5.jpg" alt=""  style="width: 90px; height: 95px;">
+                <div class="product-txt">
+                    <h3>Transformador con pulpo
+                         de 4 salidas incorporado  
+                    </h3>               
+                    <p><b>Sobre el accesorio</b></p> 
+                    <li class="lista-txt-ul">
+                        <ul class="lista-producto-txt">•	Voltaje de salida: 12V</ul>  
+                        <br>
+                        <ul class="lista-producto-txt">•	Corriente máxima de salida:  5Amp</ul>   
+                    </li>                                                                                                                                                      
+                    <p class="precio">Q 75.99</p>                    
+                    <a href="#" class="agregar-carrito btn-2" data-id="3">agregar carrito</a>
+                </div>
+            </div>
+            <div class="product">
+                <img src="Productos/Accesorio_6.jpg" alt=""  style="width: 90px; height: 95px;">
+                <div class="product-txt">
+                    <h3>Seagate, SkyHawk, Disco 
+                        duro interno de vigilancia 24/7
+                    </h3>                   
+                    <p><b>Sobre el accesorio</b></p> 
+                    <li class="lista-txt-ul">
+                        <ul class="lista-producto-txt">•	3.5 pulgadas. </ul>  
+                        <ul class="lista-producto-txt">•	Almacenamiento de 1 TB.</ul>   
+                        <ul class="lista-producto-txt">•	Velocidad de rotación de 5400 RPM.</ul>                                                                      
+                    </li>                                                                                                                                                      
+                    <p class="precio">Q 476.99</p>                    
+                    <a href="#" class="agregar-carrito btn-2" data-id="3">agregar carrito</a>
+                </div>
+            </div>
+            <div class="product">
+                <img src="Productos/Accesorio_7.jpg" alt=""  style="width: 90px; height: 95px;">
+                <div class="product-txt">
+                    <h3>Seagate Barracuda Disco 
+                        duro interno de vigilancia 24/7
+                    </h3>                    
+                    <p><b>Sobre el accesorio</b></p> 
+                    <li class="lista-txt-ul">
+                        <ul class="lista-producto-txt">•	3.5 pulgadas y Almacenamiento de 4TB.</ul>  
+                        <ul class="lista-producto-txt">•	Interfaz SATA III de 6 Gbit/s.</ul>   
+                        <ul class="lista-producto-txt">•	Velocidad de rotación de 5400 RPM.</ul>   
+                        <ul class="lista-producto-txt">•	Funcionamiento continuo 24/7.</ul>                                                                   
+                    </li>                                                                                                                                                      
+                    <p class="precio">Q 943.99</p>        
+                    <br>            
+                    <a href="#" class="agregar-carrito btn-2" data-id="3">agregar carrito</a>
+                </div>
+            </div>
+            <div class="product">
+                <img src="Productos/Accesorio_8.jpg" alt=""  style="width: 90px; height: 95px;">
+                <div class="product-txt">
+                    <h3>Bobina de cable UTP
+                         SIEMON 9C6M4-E2-RXA de 305mts   
+                    </h3>                   
+                    <p><b>Sobre el accesorio</b></p> 
+                    <li class="lista-txt-ul">
+                        <ul class="lista-producto-txt">•	Largo: 305 m y Ambiente: Interior </ul>  
+                        <ul class="lista-producto-txt">•	Frecuencia: 250MHz y su Categoría del cable de red: 6</ul>   
+                        <ul class="lista-producto-txt">•	•	Conductor: Cobre solido de 24 AWG <br> Rendimiento: Certificado hasta 100 metros.                        </ul>                                                                      
+                    </li>                                                                                                                                                      
+                    <p class="precio">Q 995.99</p>                    
+                    <a href="#" class="agregar-carrito btn-2" data-id="3">agregar carrito</a>
+                </div>
+            </div>
+            <div class="product">
+                <img src="Productos/Accesorio_9.jpg" alt=""  style="width: 90px; height: 95px;">
+                <div class="product-txt">
+                    <h3>Bobina de Cable STP Ubiquiti 
+                    </h3>                    
+                    <p><b>Sobre el accesorio</b></p> 
+                    <li class="lista-txt-ul">
+                        <ul class="lista-producto-txt">•	Ambiente: Exterior, <br>Tipo de cable: CAT5e, STP </ul>  
+                        <ul class="lista-producto-txt">•	Soporte Ethernet: Hasta 1 Gbps <br> Calibre: 24 AWG</ul>   
+                        <ul class="lista-producto-txt">•	IP 67 con estructura <br> robusta de material metálico <br> Imágenes nítidas</ul> 
+                        <ul class="lista-producto-txt">•    chaqueta: Polietileno</ul> 
+                    </li>                                                                                                                                                      
+                    <p class="precio">Q |735.99</p>                    
+                    <a href="#" class="agregar-carrito btn-2" data-id="3">agregar carrito</a>
+                </div>
+            </div>   
+            <br> 
+            <br>
+            <h2>Switches</h2> 
+            <br>
+            <div class="product">
+                <img src="Productos/Switch_1.jpg" alt=""  style="width: 80px; height: 80px;">
+                <div class="product-txt">
+                    <h3>Nombre:  Swich simple de 8 puertos</h3>
+                    <p>Marca:  Tp-link</p>
+                    <p>Modelo:  TL-SF1008D</p>
+                    <p><b>Sobre el switch</b></p>  
+                    <li class="lista-txt-ul">
+                       <ul  class="lista-producto-txt">•	8 puertos RJ45 10/100 Mbps <br> con auto-negociación.</ul>
+                       <ul  class="lista-producto-txt">•	Tecnología Green Ethernet, <br> ahorro de energía hasta 60%.</ul> 
+                       <ul  class="lista-producto-txt">•	Funcionamiento silencioso, <br> diseño sin ventilador.</ul>                       
+                       <ul  class="lista-producto-txt">•	Plug and Play, sin  <br>necesidad de configuración.</ul>
+                       <ul  class="lista-producto-txt">•	Carcasa compacta, apta <br> para escritorio o <br> montaje en pared.</ul>           
+                    </li>
+                    <p class="precio">Q 94.99 </p>                                   
+                    <a href="#" class="agregar-carrito btn-2" data-id="6">agregar carrito</a>
+                </div>
+            </div>  
+            <div class="product">
+                <img src="Productos/switch_2.jpg" alt=""  style="width: 80px; height: 80px;">
+                <div class="product-txt">
+                    <h3>Nombre:  Switch simple 16 puertos</h3>
+                    <p>Marca:  TP-link</p>
+                    <p>Modelo:  TL-SG116</p>
+                    <p><b>Sobre el switch</b></p>  
+                    <li class="lista-txt-ul">
+                       <ul  class="lista-producto-txt">•	16 puertos Gigabit (10/100/1000 <br> Mbps) con auto-negociación.</ul>
+                       <ul  class="lista-producto-txt">•	Plug & Play, sin necesidad <br> de configuración.</ul> 
+                       <ul  class="lista-producto-txt">•	Tecnología Green  <br>Ethernet, reduce el <br>consumo energético.</ul>                       
+                       <ul  class="lista-producto-txt">•	Carcasa metálica, ideal <br> para escritorio o <br> montaje en pared.</ul>
+                       <ul  class="lista-producto-txt">•	Capacidad de conmutación <br> de 32 Gbps, sin bloqueos.</ul>                       
+                    </li>
+                    <p class="precio">Q 450.99 </p>                                   
+                    <a href="#" class="agregar-carrito btn-2" data-id="6">agregar carrito</a>
+                </div>
+            </div>
+            <div class="product">
+                <img src="Productos/switch_3.jpg" alt=""  style="width: 80px; height: 80px;">
+                <div class="product-txt">
+                    <h3>Nombre:  Switch simple 24 puertos</h3>
+                    <p>Marca:  D-Link</p>
+                    <p>Modelo: DGS-1024C</p>
+                    <p><b>Sobre el switch</b></p>  
+                    <li class="lista-txt-ul">
+                       <ul  class="lista-producto-txt">•	24 puertos LAN Gigabit <br> para conexiones por cable <br> de alta velocidad</ul>
+                       <ul  class="lista-producto-txt">•	Instalación plug-and-play <br> para mayor comodidad <br> y Negociación </ul> 
+                       <ul  class="lista-producto-txt">•	Half / full-duplex, auto <br> MDI / MDIX y conmutación <br> de almacenamiento y envío.</ul>                       
+                       <ul  class="lista-producto-txt">•	Transmisión de datos <br> a máxima velocidad de  <br>cable y Diseño eficiente </ul>                
+                    </li>
+                    <br>
+                    <p class="precio">Q 4632.99 </p>                                   
+                    <a href="#" class="agregar-carrito btn-2" data-id="6">agregar carrito</a>
+                </div>
+            </div>  
+            <div class="product">
+                <img src="Productos/switch_4.jpg" alt=""  style="width: 80px; height: 80px;">
+                <div class="product-txt">
+                    <h3>Nombre: JetStream Switch dministrable de 24 Puertos PoE</h3>
+                    <p>Marca:  Tp-Link</p>
+                    <p>Modelo T2600G-18TS</p>
+                    <p><b>Sobre el switch</b></p>  
+                    <li class="lista-txt-ul">
+                       <ul  class="lista-producto-txt">•	Puertos: 16 puertos RJ45 <br> Gigabit + 2 ranuras SFP.</ul>
+                       <ul  class="lista-producto-txt">•	Capacidad de conmutación: <br> 36 Gbps.</ul> 
+                       <ul  class="lista-producto-txt">•	Seguridad: 802.1X, ACL, <br>protección contra DoS.</ul>                       
+                       <ul  class="lista-producto-txt">•	QoS: Prioridades CoS/DSCP, <br> 8 colas de prioridad. </ul>
+                       <ul  class="lista-producto-txt">•	Funciones L2/L2+: <br>Enrutamiento estático, IGMP <br>Snooping, LACP, STP/RSTP/MSTP.</ul>                 
+                    </li>
+                    <p class="precio">Q 2163.99 </p>                                   
+                    <a href="#" class="agregar-carrito btn-2" data-id="6">agregar carrito</a>
+                </div>
+            </div> 
+            <div class="product">
+                <img src="Productos/switch_5.jpg" alt=""  style="width: 80px; height: 80px;">
+                <div class="product-txt">
+                    <h3>Nombre: Switch 16 puertos gestionable</h3>
+                    <p>Marca:  Tp-Link</p>
+                    <p>Modelo:  TL-SG3216</p>
+                    <p><b>Sobre el switch</b></p>  
+                    <li class="lista-txt-ul">
+                       <ul  class="lista-producto-txt">•	16 puertos RJ45 gigabit y 2 ranuras SFP gigabit </ul>
+                       <ul  class="lista-producto-txt">•	Aprovisionamiento sin  intervención (ZTP)</ul> 
+                       <ul  class="lista-producto-txt">•	Administración centralizada en la nube y monitoreo inteligente</ul>                       
+                       <ul  class="lista-producto-txt">•	Acceso a la nube y la  aplicación Omada para una <br>máxima comodidad y una gestión sencilla</ul>
+                       <ul  class="lista-producto-txt">•	Ayuda a enrutar el tráfico interno para un <br> uso más eficiente de los <br> recursos de la red.</ul>                     
+                    </li>
+                    <p class="precio">Q 1068.99 </p>                                   
+                    <a href="#" class="agregar-carrito btn-2" data-id="6">agregar carrito</a>
+                </div>
+            </div> 
+            <div class="product">
+                <img src="Productos/switch_6.jpg" alt=""  style="width: 80px; height: 80px;">
+                <div class="product-txt">
+                    <h3>Nombre: Switch de 48 puertos gestionable</h3>
+                    <p>Marca:  Tp-Link</p>
+                    <p>Modelo:  TL-SG3452P</p>
+                    <p><b>Sobre la camara</b></p>  
+                    <li class="lista-txt-ul">
+                       <ul  class="lista-producto-txt">•	48 puertos PoE+ con soporte 802.3 af/at <br></ul>
+                       <ul  class="lista-producto-txt">•	4 enlaces uplink de 1 Gigabit <br></ul> 
+                       <ul  class="lista-producto-txt">•	Presupuesto PoE de 384W para múltiples dispositivos <br></ul>                       
+                       <ul  class="lista-producto-txt">•	Rendimiento 104 Gbps y reenvío 77.4 Mpps <br></ul>
+                       <ul  class="lista-producto-txt">•	Administración centralizada</ul> <br>  
+                    </li>
+                    <p></p>
+                    <br>
+                    <p></p>
+                    <br>
+                    <p></p>
+                    <br>
+                    <p class="precio">Q 19497.99 </p>                                   
+                    <a href="#" class="agregar-carrito btn-2" data-id="6">agregar carrito</a>
+                </div>
+            </div>  
+            <div class="product">
+                <img src="Productos/switch_7.png" alt=""  style="width: 80px; height: 80px;">
+                <div class="product-txt">
+                    <h3>Nombre: Access Point Unifi Wave 2</h3>
+                    <p>Marca: Ubiquiti</p>
+                    <p>Modelo: UAP-NANOHD</p>
+                    <p><b>Sobre el switch</b></p>  
+                    <li class="lista-txt-ul">
+                       <ul  class="lista-producto-txt">•	Doble banda; 2.4 GHz y 5 GHz.</ul>
+                       <ul  class="lista-producto-txt">•	MU-MIMO 4x4 EN 5 Ghz; Antena optimizada para 802.11ac Wave 2.</ul> 
+                       <ul  class="lista-producto-txt">•	Potencia de salida en banda 2.4 GHz: 200mW.</ul>                       
+                       <ul  class="lista-producto-txt">•	Potencia de salida en banda 5 GHz: 400mW. </ul>
+                       <ul  class="lista-producto-txt">•	Ganancia de antenas: 2.4 GHz 2.8 dBi y 5 GHz 3 dBi.</ul>
+                       <ul  class="lista-producto-txt">•	Admite compresión de vídeo H.265+/H.265.</ul>
+                    </li>
+                    <p class="precio">Q 1759.99 </p>                                   
+                    <a href="#" class="agregar-carrito btn-2" data-id="6">agregar carrito</a>
+                </div>
+            </div> 
+            <div class="product">
+                <img src="Productos/switch_8.jpg" alt=""  style="width: 80px; height: 80px;">
+                <div class="product-txt">
+                    <h3>Nombre: Punto de Acceso NanoStation AirMax 8dBi CPE</h3>
+                    <p>Marca:  Ubiquiti</p>
+                    <p>Modelo:  LOCOM2</p>
+                    <p><b>Sobre el switch</b></p>  
+                    <li class="lista-txt-ul">
+                       <ul  class="lista-producto-txt">•	Frecuencia de funcionamiento de 2.4 GHz</ul>
+                       <ul  class="lista-producto-txt">•	Ganancia de antena de 8.5 dBi</ul> 
+                       <ul  class="lista-producto-txt">•	1 puerto Ethernet 10/100</ul>                       
+                       <ul  class="lista-producto-txt">•	Procesador Atheros de 400 MHz</ul>
+                       <ul  class="lista-producto-txt">•	Vista nocturna hasta 100m.</ul>
+                       <ul  class="lista-producto-txt">•	RAM de 32 MB y Memoria flash de 8 MB</ul>
+                       <ul  class="lista-producto-txt">•	    Adaptador PoE incluido.</ul>
+                    </li>
+                    <p></p>
+                    <p class="precio">Q 520.99 </p>                                   
+                    <a href="#" class="agregar-carrito btn-2" data-id="6">agregar carrito</a>
+                </div>
+            </div> 
+            <div class="product">
+                <img src="Productos/switch_29.jpg" alt=""  style="width: 80px; height: 80px;">
+                <div class="product-txt">
+                    <h3>Nombre:  Punto de Acceso Gigabit de Doble Banda</h3>
+                    <p>Marca: Tp-Link</p>
+                    <p>Modelo:  AC1750</p>
+                    <p><b>Sobre el switch</b></p>  
+                    <li class="lista-txt-ul">
+                       <ul  class="lista-producto-txt">•	450Mbps simultáneos en 2.4GHz y 1300Mbps en 5GHz totalizan velocidades Wi-Fi de 1750Mbps</ul>
+                       <ul  class="lista-producto-txt">•	Gestión centralizada en la nube y aplicación Omada </ul> 
+                       <ul  class="lista-producto-txt">•	Admite Power over Ethernet (PoE) (802.3at / 802.3af) </ul>                       
+                       <ul  class="lista-producto-txt">•	Red de invitados segura junto con múltiples opciones de autenticación </ul>                       
+                       <ul  class="lista-producto-txt">•	Admite compresión de vídeo H.265+/H.265.</ul>
+                    </li>
+                    <p class="precio">Q 4632.99 </p>                                   
+                    <a href="#" class="agregar-carrito btn-2" data-id="6">agregar carrito</a>
+                </div>
+            </div>  
+            <div class="product">
+                <img src="Productos/switch_10.jpg" alt=""  style="width: 80px; height: 80px;">
+                <div class="product-txt">
+                    <h3>Nombre:  Punto de Acceso Inalámbrico MESH</h3>
+                    <p>Marca:  Ubiquiti</p>
+                    <p>Modelo:  U6-Mesh</p>
+                    <p><b>Sobre switch</b></p>  
+                    <li class="lista-txt-ul">
+                       <ul  class="lista-producto-txt">•	Cobertura de 140 m² (1500 pies²)</ul>
+                       <ul  class="lista-producto-txt">•	Más de 300 dispositivos conectados.</ul> 
+                       <ul  class="lista-producto-txt">•	Wi-Fi6 (4x4 MIMO).</ul>                       
+                       <ul  class="lista-producto-txt">•	Alimentado usando PoE.</ul>
+                       <ul  class="lista-producto-txt">•	Factor de forma compacto.</ul>
+                       <ul  class="lista-producto-txt">•	Versátil montaje en mesa, pared o poste.</ul>
+                    </li>
+                    <p></p>
+                    <br>
+                    <p></p>
+                    <br>
+                    <p><br></p><br>                           
+                    <p class="precio">Q 1997.99 </p>                                   
+                    <a href="#" class="agregar-carrito btn-2" data-id="6">agregar carrito</a>
+                </div>
+            </div> 
+            <div class="product">
+                <img src="Productos/switch_11.jpg" alt=""  style="width: 80px; height: 80px;">
+                <div class="product-txt">
+                    <h3>Nombre:  Firewall Appliance (solo aparato, sin suscripción)</h3>
+                    <p>Marca:   Fortinet</p>
+                    <p>Modelo:  FG-40F</p>
+                    <p><b>Sobre switch</b></p>  
+                    <li class="lista-txt-ul">
+                       <ul  class="lista-producto-txt">•	FortiGate 40F, sin ventilador, ideal para sucursales y empresas.</ul>
+                       <ul  class="lista-producto-txt">•	Seguridad de alto rendimiento con aceleración de hardware.</ul> 
+                       <ul  class="lista-producto-txt">•	Filtrado de tráfico y defensa contra amenazas internas y externas.</ul>                       
+                       <ul  class="lista-producto-txt">•	Evaluación continua y automatización de seguridad.</ul>
+                       <ul  class="lista-producto-txt">•	Rendimiento eficiente con menor costo, complejidad y durabilidad.</ul>
+                    </li>                           
+                    <p class="precio">Q 5970.99 </p>                                   
+                    <a href="#" class="agregar-carrito btn-2" data-id="6">agregar carrito</a>
+                </div>
+            </div> 
+            <div class="product">
+                <img src="Productos/switch_12.jpg" alt=""  style="width: 80px; height: 80px;">
+                <div class="product-txt">
+                    <h3>Nombre:  Firewall next gen, 16 x 1Gb Rj45, 8 × 1Gb SFP, 2× 10Gb SFP+, con 1 año de licencia por defecto</h3>
+                    <p>Marca: Fiberstore</p>
+                    <p>Modelo:  NSG -5220</p>
+                    <p><b>Sobre el switch</b></p>  
+                    <li class="lista-txt-ul">
+                       <ul  class="lista-producto-txt">•	Soporta la actualización y uso de IPS, AV, filtrado de URL, Qos y TI a través de los servicios BDL</ul>
+                       <ul  class="lista-producto-txt">•	Tecnología de análisis y detección de anomalías del tráfico de red</ul>                       
+                       <ul  class="lista-producto-txt">•	Tipos de interfaz enriquecidos con 16× GE, 8× SFP, 2× 10 SFP+</ul>
+                       <ul  class="lista-producto-txt">•	Soporta la importación por lotes de listas negras de direcciones IP</ul>
+                    </li>
+                    <p class="precio">Q 38952.99 </p>                                   
+                    <a href="#" class="agregar-carrito btn-2" data-id="6">agregar carrito</a>
+                </div>
+            </div>      
+        </div>       
+        </div>       
+        </div>              
+        </div>      
+    </div>       
+</div>       
+
+</div>             
+    </main>
+
+    <section class="icons container">
+        <div class="icon-1">
+            <div class="icon-img">
+                <img src="" alt="">
+            </div>
+            <div class="icon-txt">
+                <h3> ofreciendo soluciones de vanguardia</h3>
+                <p>ofreciendo soluciones de vanguardia</p>
+            </div>
+        </div>
+        <div class="icon-1">
+            <div class="icon-1">
+                <img src="" alt="">
+            </div>
+            <div class="icon-txt">
+                <h3> ofreciendo soluciones de vanguardia</h3>
+                <p>ofreciendo soluciones de vanguardia</p>
+            </div>
+        </div>
+        <div class="icon-1">
+            <div class="icon-img">
+                <img src="" alt="">
+            </div>
+            <div class="icon-txt">
+                <h3> ofreciendo soluciones de vanguardia</h3>
+                <p>ofreciendo soluciones de vanguardia</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="blog container">
+        <div class="blog-1">
+            <img src="IMG/blog_1.webp" alt="">
+            <h3>blog 2</h3>
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere minus, voluptates 
+                distinctio, nostrum vero rerum consectetur id ullam quaerat enim sint sit suscipit.
+                Labore sint quia, reprehenderit alias accusamus modi!
+            </p>
+        </div>
+        <div class="blog-1">
+            <img src="IMG/blog_2.jpg" alt="">
+            <h3>blog 1</h3>
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere minus, voluptates 
+                distinctio, nostrum vero rerum consectetur id ullam quaerat enim sint sit suscipit.
+                Labore sint quia, reprehenderit alias accusamus modi!
+            </p>
+        </div>
+        <div class="blog-1">
+            <img src="IMG/blog_3.jpg" alt="">
+            <h3>blog 3</h3>
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere minus, voluptates 
+                distinctio, nostrum vero rerum consectetur id ullam quaerat enim sint sit suscipit.
+                Labore sint quia, reprehenderit alias accusamus modi!
+            </p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content container">
+            <div class="link">
+                <h3>lorem</h3>
+                <ul>
+                    <li><a href="#">lorem</a></li>
+                    <li><a href="#">lorem</a></li>
+                    <li><a href="#">lorem</a></li>
+                    <li><a href="#">lorem</a></li>
+                </ul>
+            </div>
+
+            <div class="link">
+                <h3>Lorem</h3>
+                <ul>
+                    <li><a href="#">lorem</a></li>
+                    <li><a href="#">lorem</a></li>
+                    <li><a href="#">lorem</a></li>
+                    <li><a href="#">lorem</a></li>
+                </ul>
+            </div>
+
+            <div class="link">
+                <h3>Lorem</h3>
+                <ul>
+                    <li><a href="#">lorem</a></li>
+                    <li><a href="#">lorem</a></li>
+                    <li><a href="#">lorem</a></li>
+                    <li><a href="#">lorem</a></li>
+                </ul>
+            </div>
+            <div class="link">
+                <h3>Lorem</h3>
+                <ul>
+                    <li><a href="#">lorem</a></li>
+                    <li><a href="#">lorem</a></li>
+                    <li><a href="#">lorem</a></li>
+                    <li><a href="#">lorem</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="productos.js"></script>
+</body>
+</html>

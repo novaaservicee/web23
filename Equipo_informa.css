@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+.header{
+    display: flex;
+    position: relative;
+    margin-bottom: 600px;  
+   /* separa el header del titulo de abajo */
+}
+.menu{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;  
+    z-index: 1000;  
+}
+.logo{
+    color: darkslategray;
+    font-size: 25px;
+    font-weight: 800;
+}
+.menu .navbar  ul li{
+    position: relative;
+    float: left;
+}
+.menu .navbar  ul li a{    
+    font-weight: bold;
+    font-size: 18px;
+    padding: 20px;
+    color: darkslategray;
+    display: block;
+    font-weight: 600;
+}
+.menu .navbar  ul li a:hover{
+    color: #7e7674;
+}
+#menu{
+    display: none;    
+}
+.menu-icono{
+    width: 40px;
+}
+.menu label{
+    cursor: pointer;
+    display: none;
+}
+.submenu{
+    position: relative;
+}
+.submenu #carrito{
+    display: none;
+}
+.submenu:hover #carrito{
+    display: block;
+    position: absolute;
+    right: 0;
+    backdrop-filter: blur(10px);
+    top: 100%;
+    z-index: 1;
+    background-color: #4E4b5076;
+    padding: 20px;
+    min-height: 150px;
+    min-width: 400px;
+}
+
+table{
+    width: 100%;    
+}
+th{
+    color: darkslategray; 
+}
+td{
+    color: darkslategray;
+}
+.borrar{
+    background-color: #e45d34;
+    border-radius: 50%;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: darkslategray;
+    font-weight: 800;
+}
+.header-content{
+    position: relative;
+    text-align: center;
+    margin-top: 300px;
+}
+.header-content h1{
+    font-size: 70px;
+    color: darkslategray;
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+.header.header-content p{
+    font-size: 18px;
+    padding: 0 200px;
+    color: #8b7e7b;
+    margin-bottom: 80px;    
+}
+ 
+@media(max-width: 991px){
+    .menu{
+        padding: 30px;
+    }
+    .menu label{
+        display: initial;
+    }
+    .menu .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #fdb87d ;
+        display: none;
+    }
+    
+    .logo{
+        display: none;
+    }
+    .menu .navbar ul li{
+        width: 100%;
+    }
+
+    #menu:checked ~ .navbar{
+        display: initial;
+    }
+    .header-content{
+        flex-direction: column;
+        padding: 30px;
+        margin-top: 120px;
+    }
+    .header-content h1{
+        font-size: 40px;
+    }
+    .header-content p{
+        padding: 0;
+        margin-bottom: 40px;
+    }
+}

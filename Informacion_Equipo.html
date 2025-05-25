@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+<html lang="es">
+<head >
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="Equipo_informa.css">
+  <title>Equipo de Marketing</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .team-member {
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+      cursor: pointer;
+    }      
+    .expanded {
+    
+      transform: scale(1.1);
+      z-index: 20;
+    }
+
+    .modal-curriculum {
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s ease, visibility 0.3s;
+      z-index: 9999;
+    }
+
+    .modal-active {
+      opacity: 1;
+      visibility: visible;
+    }
+    .text-4xl {
+  margin-top: -370px; /* Ajusta este valor para acercar el título a la imagen */
+     }
+    .curriculum-content {
+      background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+      transform: scale(0.95);
+      transition: transform 0.3s ease;
+      max-height: 90vh;
+      overflow-y: auto;
+    } 
+    .modal-active .curriculum-content {
+      transform: scale(1);
+    }
+
+    #mainImageA::after,
+    #mainImageB::after,
+    #mainImageC::after,
+    #mainImageD::after {
+      content: "¡Haz clic para ver al equipo!";
+      position: absolute;
+      bottom: -2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      color: #3B82F6;
+      font-weight: bold;
+      opacity: 0.8;
+    }
+  </style>
+</head>
+<body class="bg-gray-100 min-h-screen">
+
+  <header class="header">
+        <div class="menu container" >
+            <a href="#" class="logo">Services S.A</a>
+            <input type="checkbox" id="menu">
+            <label for="menu"> <img src="IMG/menu.png" class="menu-icono" alt="menu"></label>
+          <nav   class="navbar">
+            <ul>
+                <li><a style="font-weight: bold; font-size: 20px;" href="index.html">Inicio</a></li>
+                <li><a style="font-weight: bold; font-size: 20px;" href="Servicios.html">Servicios</a></li>
+                <li><a style="font-weight: bold; font-size: 20px;" href="Productos.html">Productos</a></li>
+                <li><a style="font-weight: bold; font-size: 20px;" href="tel:50243987861">Contacto</a></li>          
+            </ul>
+          </nav>
+
+          <div >
+            <ul >
+                <li class="submenu" >
+                    <img src="" id="img-carrito" alt="" style="width: 40px; border-radius: 50%;">
+                    <div id="carrito">
+                        <table id="lista-carrito">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                </tr>s
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                        <a href="" id="vaciar-carrito" class="btn-2">Vaciar carrito</a>
+                    </div>
+                </li>
+            </ul>
+          </div>
+        </div>
+        </header>
+
+  <!-- BLOQUES DE EQUIPOS A-D -->
+  <div class="space-y-64" >
+    <!-- Equipo A -->
+    <div class="container mx-auto px-4 py-8">
+      <h1 class="text-4xl font-bold text-center mb-40 text-blue-600">Equipo de Marketing Digital A</h1>
+      <div class="relative w-96 h-96 mx-auto mb-64">
+        <img src="IMG-Equipo/Header-IMG.jpeg" alt="Equipo A" class="w-full h-full object-cover rounded-full shadow-lg cursor-pointer hover:scale-105 transition-transform duration-300" id="mainImageA" onclick="toggleTeam('A')">
+        <div class="team-grid hidden" id="teamGridA">
+          <div class="team-member absolute -top-32 -left-32 transform hover:scale-125 hover:z-30">
+            <img src="IMG-Equipo/Marketin-women.png" alt="Ana A" class="w-40 h-40 rounded-full border-[3px] border-white shadow-xl" onclick="showModal('anaA')">
+            <a href="https://wa.me/41617088"  target="_blank" class="block text-center mt-1 text-blue-600 hover:underline text-sm">Chatear con Ana A</a>
+          </div>
+          <div class="team-member absolute -top-32 -right-32 transform hover:scale-125 hover:z-30">
+            <img src="IMG-Equipo/Marketin-1.webp" alt="Carlos A" class="w-40 h-40 rounded-full border-[3px] border-white shadow-xl" onclick="showModal('carlosA')">
+            <a href="https://wa.me/41617088"  target="_blank" class="block text-center mt-1 text-blue-600 hover:underline text-sm">Chatear con Carlos A</a>
+          </div>
+          <div class="team-member absolute -bottom-32 -left-32 transform hover:scale-125 hover:z-30">
+            <img src="IMG-Equipo/Marketin-Women-2.jpeg" alt="María A" class="w-40 h-40 rounded-full border-[3px] border-white shadow-xl" onclick="showModal('mariaA')">
+            <a href="https://wa.me/41617088"  target="_blank" class="block text-center mt-1 text-blue-600 hover:underline text-sm">Chatear con María A</a>
+          </div>
+          <div class="team-member absolute -bottom-32 -right-32 transform hover:scale-125 hover:z-30">
+            <img src="IMG-Equipo/Marketon-2.jpeg" alt="Pedro A" class="w-40 h-40 rounded-full border-[3px] border-white shadow-xl" onclick="showModal('pedroA')">
+            <a href="https://wa.me/41617088"  target="_blank" class="block text-center mt-1 text-blue-600 hover:underline text-sm">Chatear con Pedro A</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Equipo B -->
+    <div class="container mx-auto px-4 py-8">
+      <h1 class="text-4xl font-bold text-center mb-40 text-blue-600">Equipo de Marketing Digital B</h1>
+      <div class="relative w-96 h-96 mx-auto mb-64">
+        <img src="IMG-Equipo/Contabilidad-header.jpg" alt="Equipo B" class="w-full h-full object-cover rounded-full shadow-lg cursor-pointer hover:scale-105 transition-transform duration-300" id="mainImageB" onclick="toggleTeam('B')">
+        <div class="team-grid hidden" id="teamGridB">
+          <div class="team-member absolute -top-32 -left-32 transform hover:scale-125 hover:z-30">
+            <img src="IMG-Equipo/Contabilidad-women-1.png" alt="Laura B" class="w-40 h-40 rounded-full border-[3px] border-white shadow-xl" onclick="showModal('lauraB')">
+            <a href="https://wa.me/41617088"  target="_blank" class="block text-center mt-1 text-blue-600 hover:underline text-sm">Chatear con Laura B</a>
+          </div>
+          <div class="team-member absolute -top-32 -right-32 transform hover:scale-125 hover:z-30">
+            <img src="IMG-Equipo/Contabilidad-men.jpeg" alt="Javier B" class="w-40 h-40 rounded-full border-[3px] border-white shadow-xl" onclick="showModal('javierB')">
+            <a href="https://wa.me/41617088"  target="_blank" class="block text-center mt-1 text-blue-600 hover:underline text-sm">Chatear con Javier B</a>
+          </div>
+          <div class="team-member absolute -bottom-32 -left-32 transform hover:scale-125 hover:z-30">
+            <img src="IMG-Equipo/Contabilidad-women-2.webp" alt="Sofía B" class="w-40 h-40 rounded-full border-[3px] border-white shadow-xl" onclick="showModal('sofiaB')">
+            <a href="https://wa.me/41617088"  target="_blank" class="block text-center mt-1 text-blue-600 hover:underline text-sm">Chatear con Sofía B</a>
+          </div>
+          <div class="team-member absolute -bottom-32 -right-32 transform hover:scale-125 hover:z-30">
+            <img src="IMG-Equipo/Contabilidad-men-2.jpeg" alt="Diego B" class="w-40 h-40 rounded-full border-[3px] border-white shadow-xl" onclick="showModal('diegoB')">
+            <a href="https://wa.me/41617088"  target="_blank" class="block text-center mt-1 text-blue-600 hover:underline text-sm">Chatear con Diego B</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Equipo C -->
+    <div class="container mx-auto px-4 py-8">
+      <h1 class="text-4xl font-bold text-center mb-40 text-blue-600">Equipo de Marketing Digital C</h1>
+      <div class="relative w-96 h-96 mx-auto mb-64">
+        <img src="IMG-Equipo/Ventas-Header.jpg" alt="Equipo C" class="w-full h-full object-cover rounded-full shadow-lg cursor-pointer hover:scale-105 transition-transform duration-300" id="mainImageC" onclick="toggleTeam('C')">
+        <div class="team-grid hidden" id="teamGridC">
+          <div class="team-member absolute -top-32 -left-32 transform hover:scale-125 hover:z-30">
+            <img src="IMG-Equipo/Ventas-women-1.jpeg" alt="Marta C" class="w-40 h-40 rounded-full border-[3px] border-white shadow-xl" onclick="showModal('martaC')">
+            <a href="https://wa.me/41617088"  target="_blank" class="block text-center mt-1 text-blue-600 hover:underline text-sm">Chatear con Marta C</a>
+          </div>
+          <div class="team-member absolute -top-32 -right-32 transform hover:scale-125 hover:z-30">
+            <img src="IMG-Equipo/Ventas-men-1.png" alt="Roberto C" class="w-40 h-40 rounded-full border-[3px] border-white shadow-xl" onclick="showModal('robertoC')">
+            <a href="https://wa.me/41617088"  target="_blank" class="block text-center mt-1 text-blue-600 hover:underline text-sm">Chatear con Roberto C</a>
+          </div>
+          <div class="team-member absolute -bottom-32 -left-32 transform hover:scale-125 hover:z-30">
+            <img src="IMG-Equipo/ventas-women-2.jpeg" alt="Elena C" class="w-40 h-40 rounded-full border-[3px] border-white shadow-xl" onclick="showModal('elenaC')">
+            <a href="https://wa.me/41617088"  target="_blank" class="block text-center mt-1 text-blue-600 hover:underline text-sm">Chatear con Elena C</a>
+          </div>
+          <div class="team-member absolute -bottom-32 -right-32 transform hover:scale-125 hover:z-30">
+            <img src="IMG-Equipo/ventas-men-2.jpeg" alt="Andrés C" class="w-40 h-40 rounded-full border-[3px] border-white shadow-xl" onclick="showModal('andresC')">
+            <a href="https://wa.me/41617088"  target="_blank" class="block text-center mt-1 text-blue-600 hover:underline text-sm">Chatear con Andrés C</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Equipo D -->
+    <div class="container mx-auto px-4 py-8">
+      <h1 class="text-4xl font-bold text-center mb-40 text-blue-600">Equipo de Marketing Digital D</h1>
+      <div class="relative w-96 h-96 mx-auto mb-64">
+        <img src="IMG-Equipo/headertec.jpg" alt="Equipo D" class="w-full h-full object-cover rounded-full shadow-lg cursor-pointer hover:scale-105 transition-transform duration-300" id="mainImageD" onclick="toggleTeam('D')">
+        <div class="team-grid hidden" id="teamGridD">
+          <div class="team-member absolute -top-32 -left-32 transform hover:scale-125 hover:z-30">
+            <img src="IMG-Equipo/tecnico-women-1.jpeg" alt="Isabel D" class="w-40 h-40 rounded-full border-[3px] border-white shadow-xl" onclick="showModal('isabelD')">
+            <a href="https://wa.me/41617088"  target="_blank" class="block text-center mt-1 text-blue-600 hover:underline text-sm">Chatear con Isabel D</a>
+          </div>
+          <div class="team-member absolute -top-32 -right-32 transform hover:scale-125 hover:z-30">
+            <img src="IMG-Equipo/tecnico-men-1.jpeg" alt="Fernando D" class="w-40 h-40 rounded-full border-[3px] border-white shadow-xl" onclick="showModal('fernandoD')">
+            <a href="https://wa.me/41617088"  target="_blank" class="block text-center mt-1 text-blue-600 hover:underline text-sm">Chatear con Fernando D</a>
+          </div>
+          <div class="team-member absolute -bottom-32 -left-32 transform hover:scale-125 hover:z-30">
+            <img src="IMG-Equipo/tecnico-women-2.png" alt="Carmen D" class="w-40 h-40 rounded-full border-[3px] border-white shadow-xl" onclick="showModal('carmenD')">
+            <a href="https://wa.me/41617088"  target="_blank" class="block text-center mt-1 text-blue-600 hover:underline text-sm">Chatear con Carmen D</a>
+          </div>
+          <div class="team-member absolute -bottom-32 -right-32 transform hover:scale-125 hover:z-30">
+            <img src="IMG-Equipo/tecnico-men-2.png" alt="Pablo D" 
+         class="w-40 h-40 rounded-full border-[3px] border-white shadow-xl" 
+         onclick="showModal('pabloD')">
+    <a href="#chat-pablo-d" 
+       class="block text-center mt-1 text-blue-600 hover:underline text-sm">
+       Chatear con Pablo D
+    </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODALES COMPLETOS -->
+  <!-- Equipo A -->
+  <div id="anaAModal" class="modal-curriculum fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4">
+    <div class="curriculum-content relative max-w-2xl w-full bg-white rounded-2xl shadow-2xl p-8">
+      <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-500 hover:text-blue-600">
+        <svg xmlns="IMG" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+      <div class="flex items-center mb-6">
+        <img src="IMG-Equipo/Marketin-women.png" class="w-24 h-24 rounded-full mr-6 border-4 border-blue-100">
+        <div>
+          <h2 class="text-3xl font-bold text-blue-600">Ana A</h2>
+          <p class="text-xl text-gray-600">Directora de Marketing</p>
+        </div>
+      </div>
+      <div class="grid grid-cols-2 gap-6">
+        <div>
+          <h3 class="text-xl font-semibold mb-2 text-blue-500">Experiencia</h3>
+          <ul class="space-y-2">
+            <li>▶ 5 años en campañas digitales</li>
+            <li>▶ SEO/SEM avanzado</li>
+            <li>▶ Marketing de contenidos</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-xl font-semibold mb-2 text-blue-500">Habilidades</h3>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full">Google Ads</span>
+            <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full">Redes Sociales</span>
+            <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full">Analítica</span>
+          </div>
+        </div>
+        <div class="col-span-2">
+          <h3 class="text-xl font-semibold mb-2 text-blue-500">Educación</h3>
+          <p>Lic. en Publicidad - Universidad X</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="carlosAModal" class="modal-curriculum fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4">
+    <div class="curriculum-content relative max-w-2xl w-full bg-white rounded-2xl shadow-2xl p-8">
+      <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-500 hover:text-blue-600">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+      <div class="flex items-center mb-6">
+        <img src="IMG-Equipo/Marketin-1.webp" class="w-24 h-24 rounded-full mr-6 border-4 border-blue-100">
+        <div>
+          <h2 class="text-3xl font-bold text-blue-600">Carlos A</h2>
+          <p class="text-xl text-gray-600">Especialista en SEO</p>
+        </div>
+      </div>
+      <div class="grid grid-cols-2 gap-6">
+        <div>
+          <h3 class="text-xl font-semibold mb-2 text-blue-500">Experiencia</h3>
+          <ul class="space-y-2">
+            <li>▶ 7 años en optimización SEO</li>
+            <li>▶ Auditorías técnicas</li>
+            <li>▶ Estrategias de contenido</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-xl font-semibold mb-2 text-blue-500">Habilidades</h3>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full">Ahrefs</span>
+            <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full">SEMrush</span>
+            <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full">WordPress</span>
+          </div>
+        </div>
+        <div class="col-span-2">
+          <h3 class="text-xl font-semibold mb-2 text-blue-500">Educación</h3>
+          <p>Ing. en Sistemas - Universidad Y</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="mariaAModal" class="modal-curriculum fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4">
+    <div class="curriculum-content relative max-w-2xl w-full bg-white rounded-2xl shadow-2xl p-8">
+      <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-500 hover:text-blue-600">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+      <div class="flex items-center mb-6">
+        <img src="IMG-Equipo/Marketin-Women-2.jpeg" class="w-24 h-24 rounded-full mr-6 border-4 border-blue-100">
+        <div>
+          <h2 class="text-3xl font-bold text-blue-600">María A</h2>
+          <p class="text-xl text-gray-600">Especialista en Redes Sociales</p>
+        </div>
+      </div>
+      <div class="grid grid-cols-2 gap-6">
+        <div>
+          <h3 class="text-xl font-semibold mb-2 text-blue-500">Experiencia</h3>
+          <ul class="space-y-2">
+            <li>▶ 4 años en gestión de comunidades</li>
+            <li>▶ Estrategias virales</li>
+            <li>▶ Marketing influencer</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-xl font-semibold mb-2 text-blue-500">Habilidades</h3>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full">Instagram</span>
+            <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full">TikTok</span>
+            <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full">Facebook Ads</span>
+          </div>
+        </div>
+        <div class="col-span-2">
+          <h3 class="text-xl font-semibold mb-2 text-blue-500">Educación</h3>
+          <p>Lic. en Comunicación - Universidad Z</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="pedroAModal" class="modal-curriculum fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4">
+    <div class="curriculum-content relative max-w-2xl w-full bg-white rounded-2xl shadow-2xl p-8">
+      <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-500 hover:text-blue-600">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+      <div class="flex items-center mb-6">
+        <img src="IMG-Equipo/Marketon-2.jpeg" class="w-24 h-24 rounded-full mr-6 border-4 border-blue-100">
+        <div>
+          <h2 class="text-3xl font-bold text-blue-600">Pedro A</h2>
+          <p class="text-xl text-gray-600">Analista de Datos</p>
+        </div>
+      </div>
+      <div class="grid grid-cols-2 gap-6">
+        <div>
+          <h3 class="text-xl font-semibold mb-2 text-blue-500">Experiencia</h3>
+          <ul class="space-y-2">
+            <li>▶ 6 años en análisis web</li>
+            <li>▶ Google Analytics 4</li>
+            <li>▶ Data Studio</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-xl font-semibold mb-2 text-blue-500">Habilidades</h3>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full">BigQuery</span>
+            <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full">Tableau</span>
+            <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full">SQL</span>
+          </div>
+        </div>
+        <div class="col-span-2">
+          <h3 class="text-xl font-semibold mb-2 text-blue-500">Educación</h3>
+          <p>Lic. en Estadística - Universidad W</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Equipo B -->
+  <div id="lauraBModal" class="modal-curriculum fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4">
+    <div class="curriculum-content relative max-w-2xl w-full bg-white rounded-2xl shadow-2xl p-8">
+      <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-500 hover:text-blue-600">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+      <div class="flex items-center mb-6">
+        <img src="IMG-Equipo/Contabilidad-women-1.png" class="w-24 h-24 rounded-full mr-6 border-4 border-blue-100">
+        <div>
+          <h2 class="text-3xl font-bold text-blue-600">Laura B</h2>
+          <p class="text-xl text-gray-600">Directora de Contenidos</p>
+        </div>
+      </div>
+      <div class="grid grid-cols-2 gap-6">
+        <div>
+          <h3 class="text-xl font-semibold mb-2 text-blue-500">Experiencia</h3>
+          <ul class="space-y-2">
+            <li>▶ 8 años en creación de contenido</li>
+            <li>▶ Estrategias transmedia</li>
+            <li>▶ Storytelling digital</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-xl font-semibold mb-2 text-blue-500">Habilidades</h3>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full">WordPress</span>
+            <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full">Premiere Pro</span>
+            <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full">Canva</span>
+          </div>
+        </div>
+        <div class="col-span-2">
+          <h3 class="text-xl font-semibold mb-2 text-blue-500">Educación</h3>
+          <p>Lic. en Periodismo - Universidad V</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Equipo B - Modales Completos -->
+<div id="lauraBModal" class="modal-curriculum fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4">
+  <div class="curriculum-content relative max-w-2xl w-full bg-white rounded-2xl shadow-2xl p-8">
+    <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-500 hover:text-blue-600">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+      </svg>
+    </button>
+    <div class="flex items-center mb-6">
+      <img src="IMG-Equipo/Contabilidad-women-1.png" class="w-24 h-24 rounded-full mr-6 border-4 border-blue-100">
+      <div>
+        <h2 class="text-3xl font-bold text-blue-600">Laura B</h2>
+        <p class="text-xl text-gray-600">Directora de Contenidos</p>
+      </div>
+    </div>
+    <div class="grid grid-cols-2 gap-6">
+      <div>
+        <h3 class="text-xl font-semibold mb-2 text-blue-500">Experiencia</h3>
+        <ul class="space-y-2">
+          <li>▶ 8 años en creación estratégica de contenido</li>
+          <li>▶ Desarrollo de narrativas transmedia</li>
+          <li>▶ Gestión de equipos creativos</li>
+          <li>▶ Campañas virales (+1M views)</li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-xl font-semibold mb-2 text-blue-500">Habilidades</h3>
+        <div class="flex flex-wrap gap-2">
+          <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full">WordPress</span>
+          <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full">Adobe Premiere</span>
+          <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full">Canva Pro</span>
+          <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full">Storytelling</span>
+        </div>
+      </div>
+      <div class="col-span-2">
+        <h3 class="text-xl font-semibold mb-2 text-blue-500">Logros</h3>
+        <p class="text-gray-600">▶ Premio Nacional de Marketing Digital 2023<br>▶ Campaña #DigitalStorytellers (+2M impresiones)</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="javierBModal" class="modal-curriculum fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4">
+  <div class="curriculum-content relative max-w-2xl w-full bg-white rounded-2xl shadow-2xl p-8">
+    <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-500 hover:text-blue-600">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+      </svg>
+    </button>
+    <div class="flex items-center mb-6">
+      <img src="IMG-Equipo/Contabilidad-men.jpeg" class="w-24 h-24 rounded-full mr-6 border-4 border-blue-100">
+      <div>
+        <h2 class="text-3xl font-bold text-blue-600">Javier B</h2>
+        <p class="text-xl text-gray-600">Especialista en SEM</p>
+      </div>
+    </div>
+    <div class="grid grid-cols-2 gap-6">
+      <div>
+        <h3 class="text-xl font-semibold mb-2 text-blue-500">Experiencia</h3>
+        <ul class="space-y-2">
+          <li>▶ 6 años en gestión de campañas PPC</li>
+          <li>▶ ROI promedio: 450%</li>
+          <li>▶ Presupuestos +$500k mensuales</li>
+          <li>▶ Especialista en remarketing</li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-xl font-semibold mb-2 text-blue-500">Habilidades</h3>
+        <div class="flex flex-wrap gap-2">
+          <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full">Google Ads</span>
+          <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full">Meta Ads</span>
+          <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full">Google Analytics</span>
+          <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full">Optimización CPC</span>
+        </div>
+      </div>
+      <div class="col-span-2">
+        <h3 class="text-xl font-semibold mb-2 text-blue-500">Certificaciones</h3>
+        <p class="text-gray-600">▶ Google Ads Professional<br>▶ Meta Blueprint Certification</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="sofiaBModal" class="modal-curriculum fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4">
+  <div class="curriculum-content relative max-w-2xl w-full bg-white rounded-2xl shadow-2xl p-8">
+    <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-500 hover:text-blue-600">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+      </svg>
+    </button>
+    <div class="flex items-center mb-6">
+      <img src="IMG-Equipo/Contabilidad-women-2.webp" class="w-24 h-24 rounded-full mr-6 border-4 border-blue-100">
+      <div>
+        <h2 class="text-3xl font-bold text-blue-600">Sofía B</h2>
+        <p class="text-xl text-gray-600">Diseñadora UX/UI</p>
+      </div>
+    </div>
+    <div class="grid grid-cols-2 gap-6">
+      <div>
+        <h3 class="text-xl font-semibold mb-2 text-blue-500">Experiencia</h3>
+        <ul class="space-y-2">
+          <li>▶ 5 años en diseño de interfaces</li>
+          <li>▶ 12 apps publicadas en stores</li>
+          <li>▶ Especialista en conversión</li>
+          <li>▶ Diseño responsive</li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-xl font-semibold mb-2 text-blue-500">Habilidades</h3>
+        <div class="flex flex-wrap gap-2">
+          <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full">Figma</span>
+          <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full">Adobe XD</span>
+          <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full">Prototipado</span>
+          <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full">User Testing</span>
+        </div>
+      </div>
+      <div class="col-span-2">
+        <h3 class="text-xl font-semibold mb-2 text-blue-500">Portafolio</h3>
+        <p class="text-gray-600">▶ App de viajes (1M+ descargas)<br>▶ Plataforma e-learning</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="diegoBModal" class="modal-curriculum fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4">
+  <div class="curriculum-content relative max-w-2xl w-full bg-white rounded-2xl shadow-2xl p-8">
+    <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-500 hover:text-blue-600">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+      </svg>
+    </button>
+    <div class="flex items-center mb-6">
+      <img src="IMG-Equipo/Contabilidad-men-2.jpeg" class="w-24 h-24 rounded-full mr-6 border-4 border-blue-100">
+      <div>
+        <h2 class="text-3xl font-bold text-blue-600">Diego B</h2>
+        <p class="text-xl text-gray-600">Especialista en Email Marketing</p>
+      </div>
+    </div>
+    <div class="grid grid-cols-2 gap-6">
+      <div>
+        <h3 class="text-xl font-semibold mb-2 text-blue-500">Experiencia</h3>
+        <ul class="space-y-2">
+          <li>▶ 7 años en automatización</li>
+          <li>▶ Tasa de apertura promedio: 38%</li>
+          <li>▶ Campañas B2B y B2C</li>
+          <li>▶ Lead nurturing</li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-xl font-semibold mb-2 text-blue-500">Habilidades</h3>
+        <div class="flex flex-wrap gap-2">
+          <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full">Mailchimp</span>
+          <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full">HubSpot</span>
+          <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full">A/B Testing</span>
+          <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full">CRM</span>
+        </div>
+      </div>
+      <div class="col-span-2">
+        <h3 class="text-xl font-semibold mb-2 text-blue-500">Resultados</h3>
+        <p class="text-gray-600">▶ +15% conversión en flujos automatizados<br>▶ Reducción 30% en coste por lead</p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- ====================== EQUIPO C ====================== -->
+<div id="martaCModal" class="modal-curriculum fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4">
+  <div class="curriculum-content relative max-w-2xl w-full bg-white rounded-2xl shadow-2xl p-8">
+    <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-500 hover:text-blue-600">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+      </svg>
+    </button>
+    <div class="flex items-center mb-6">
+      <img src="IMG-Equipo/Ventas-women-1.jpeg" class="w-24 h-24 rounded-full mr-6 border-4 border-blue-100">
+      <div>
+        <h2 class="text-3xl font-bold text-blue-600">Marta C</h2>
+        <p class="text-xl text-gray-600">Especialista en Growth Hacking</p>
+      </div>
+    </div>
+    <div class="grid grid-cols-2 gap-6">
+      <div>
+        <h3 class="text-xl font-semibold mb-2 text-blue-500">Experiencia</h3>
+        <ul class="space-y-2">
+          <li>▶ 5 años en escalado de startups</li>
+          <li>▶ Optimización de embudos</li>
+          <li>▶ Adquisición de usuarios</li>
+          <li>▶ Automatización de marketing</li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-xl font-semibold mb-2 text-blue-500">Habilidades</h3>
+        <div class="flex flex-wrap gap-2">
+          <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full">Analytics</span>
+          <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full">A/B Testing</span>
+          <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full">CRO</span>
+          <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full">SQL</span>
+        </div>
+      </div>
+      <div class="col-span-2">
+        <h3 class="text-xl font-semibold mb-2 text-blue-500">Logros</h3>
+        <p class="text-gray-600">▶ +300% crecimiento usuarios en 6 meses<br>▶ Sistema de lead scoring implementado</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="robertoCModal" class="modal-curriculum fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4">
+  <div class="curriculum-content relative max-w-2xl w-full bg-white rounded-2xl shadow-2xl p-8">
+    <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-500 hover:text-blue-600">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+      </svg>
+    </button>
+    <div class="flex items-center mb-6">
+      <img src="IMG-Equipo/Ventas-men-1.png" class="w-24 h-24 rounded-full mr-6 border-4 border-blue-100">
+      <div>
+        <h2 class="text-3xl font-bold text-blue-600">Roberto C</h2>
+        <p class="text-xl text-gray-600">Director de Analítica</p>
+      </div>
+    </div>
+    <div class="grid grid-cols-2 gap-6">
+      <div>
+        <h3 class="text-xl font-semibold mb-2 text-blue-500">Experiencia</h3>
+        <ul class="space-y-2">
+          <li>▶ 8 años en business intelligence</li>
+          <li>▶ Modelos predictivos</li>
+          <li>▶ Dashboarding avanzado</li>
+          <li>▶ Minería de datos</li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-xl font-semibold mb-2 text-blue-500">Habilidades</h3>
+        <div class="flex flex-wrap gap-2">
+          <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full">Power BI</span>
+          <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full">Python</span>
+          <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full">BigQuery</span>
+          <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full">Machine Learning</span>
+        </div>
+      </div>
+      <div class="col-span-2">
+        <h3 class="text-xl font-semibold mb-2 text-blue-500">Certificaciones</h3>
+        <p class="text-gray-600">▶ Google Data Analytics<br>▶ AWS Certified Data Analytics</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="elenaCModal" class="modal-curriculum fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4">
+  <div class="curriculum-content relative max-w-2xl w-full bg-white rounded-2xl shadow-2xl p-8">
+    <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-500 hover:text-blue-600">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+      </svg>
+    </button>
+    <div class="flex items-center mb-6">
+      <img src="IMG-Equipo/ventas-women-2.jpeg" class="w-24 h-24 rounded-full mr-6 border-4 border-blue-100">
+      <div>
+        <h2 class="text-3xl font-bold text-blue-600">Elena C</h2>
+        <p class="text-xl text-gray-600">Especialista en Automatización</p>
+      </div>
+    </div>
+    <div class="grid grid-cols-2 gap-6">
+      <div>
+        <h3 class="text-xl font-semibold mb-2 text-blue-500">Experiencia</h3>
+        <ul class="space-y-2">
+          <li>▶ 6 años en marketing automation</li>
+          <li>▶ Integración de CRMs</li>
+          <li>▶ Flujos de nutriación</li>
+          <li>▶ Chatbots avanzados</li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-xl font-semibold mb-2 text-blue-500">Habilidades</h3>
+        <div class="flex flex-wrap gap-2">
+          <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full">HubSpot</span>
+          <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full">Zapier</span>
+          <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full">Make.com</span>
+          <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full">API Rest</span>
+        </div>
+      </div>
+      <div class="col-span-2">
+        <h3 class="text-xl font-semibold mb-2 text-blue-500">Logros</h3>
+        <p class="text-gray-600">▶ Automatización de 85% procesos<br>▶ Integración de 12 sistemas</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="andresCModal" class="modal-curriculum fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4">
+  <div class="curriculum-content relative max-w-2xl w-full bg-white rounded-2xl shadow-2xl p-8">
+    <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-500 hover:text-blue-600">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+      </svg>
+    </button>
+    <div class="flex items-center mb-6">
+      <img src="IMG-Equipo/ventas-men-2.jpeg" class="w-24 h-24 rounded-full mr-6 border-4 border-blue-100">
+      <div>
+        <h2 class="text-3xl font-bold text-blue-600">Andrés C</h2>
+        <p class="text-xl text-gray-600">Especialista en Ads</p>
+      </div>
+    </div>
+    <div class="grid grid-cols-2 gap-6">
+      <div>
+        <h3 class="text-xl font-semibold mb-2 text-blue-500">Experiencia</h3>
+        <ul class="space-y-2">
+          <li>▶ 7 años en publicidad digital</li>
+          <li>▶ Gestión de presupuestos +$1M</li>
+          <li>▶ Campañas internacionales</li>
+          <li>▶ Optimización RTB</li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-xl font-semibold mb-2 text-blue-500">Habilidades</h3>
+        <div class="flex flex-wrap gap-2">
+          <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full">Google Ads</span>
+          <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full">Programmatic</span>
+          <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full">DV360</span>
+          <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full">CTR Optimization</span>
+        </div>
+      </div>
+      <div class="col-span-2">
+        <h3 class="text-xl font-semibold mb-2 text-blue-500">Resultados</h3>
+        <p class="text-gray-600">▶ ROAS promedio 6.8x<br>▶ Reducción 40% CPA</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ====================== EQUIPO D ====================== -->
+<div id="isabelDModal" class="modal-curriculum fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4">
+  <div class="curriculum-content relative max-w-2xl w-full bg-white rounded-2xl shadow-2xl p-8">
+    <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-500 hover:text-blue-600">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+      </svg>
+    </button>
+    <div class="flex items-center mb-6">
+      <img src="IMG-Equipo/tecnico-women-1.jpeg" class="w-24 h-24 rounded-full mr-6 border-4 border-blue-100">
+      <div>
+        <h2 class="text-3xl font-bold text-blue-600">Isabel D</h2>
+        <p class="text-xl text-gray-600">Directora Estratégica</p>
+      </div>
+    </div>
+    <div class="grid grid-cols-2 gap-6">
+      <div>
+        <h3 class="text-xl font-semibold mb-2 text-blue-500">Experiencia</h3>
+        <ul class="space-y-2">
+          <li>▶ 10 años en planeación estratégica</li>
+          <li>▶ Desarrollo de marcas globales</li>
+          <li>▶ Modelos OKR/KPI</li>
+          <li>▶ Transformación digital</li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-xl font-semibold mb-2 text-blue-500">Habilidades</h3>
+        <div class="flex flex-wrap gap-2">
+          <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full">SWOT Analysis</span>
+          <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full">OKRs</span>
+          <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full">Liderazgo</span>
+          <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full">Negociación</span>
+        </div>
+      </div>
+      <div class="col-span-2">
+        <h3 class="text-xl font-semibold mb-2 text-blue-500">Logros</h3>
+        <p class="text-gray-600">▶ Estrategia para Fortune 500<br>▶ 3 premios internacionales</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="fernandoDModal" class="modal-curriculum fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4">
+  <div class="curriculum-content relative max-w-2xl w-full bg-white rounded-2xl shadow-2xl p-8">
+    <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-500 hover:text-blue-600">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+      </svg>
+    </button>
+    <div class="flex items-center mb-6">
+      <img src="IMG-Equipo/tecnico-men-1.jpeg" class="w-24 h-24 rounded-full mr-6 border-4 border-blue-100">
+      <div>
+        <h2 class="text-3xl font-bold text-blue-600">Fernando D</h2>
+        <p class="text-xl text-gray-600">Especialista en E-commerce</p>
+      </div>
+    </div>
+    <div class="grid grid-cols-2 gap-6">
+      <div>
+        <h3 class="text-xl font-semibold mb-2 text-blue-500">Experiencia</h3>
+        <ul class="space-y-2">
+          <li>▶ 9 años en tiendas online</li>
+          <li>▶ Conversión CRO</li>
+          <li>▶ UX para e-commerce</li>
+          <li>▶ Funnel optimization</li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-xl font-semibold mb-2 text-blue-500">Habilidades</h3>
+        <div class="flex flex-wrap gap-2">
+          <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full">Shopify</span>
+          <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full">WooCommerce</span>
+          <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full">GA4</span>
+          <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full">Hotjar</span>
+        </div>
+      </div>
+      <div class="col-span-2">
+        <h3 class="text-xl font-semibold mb-2 text-blue-500">Resultados</h3>
+        <p class="text-gray-600">▶ +200% ventas anuales<br>▶ Tasa conversión 4.8%</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="carmenDModal" class="modal-curriculum fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4">
+  <div class="curriculum-content relative max-w-2xl w-full bg-white rounded-2xl shadow-2xl p-8">
+    <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-500 hover:text-blue-600">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+      </svg>
+    </button>
+    <div class="flex items-center mb-6">
+      <img src="IMG-Equipo/tecnico-women-2.png" class="w-24 h-24 rounded-full mr-6 border-4 border-blue-100">
+      <div>
+        <h2 class="text-3xl font-bold text-blue-600">Carmen D</h2>
+        <p class="text-xl text-gray-600">Community Manager Senior</p>
+      </div>
+    </div>
+    <div class="grid grid-cols-2 gap-6">
+      <div>
+        <h3 class="text-xl font-semibold mb-2 text-blue-500">Experiencia</h3>
+        <ul class="space-y-2">
+          <li>▶ 7 años en gestión comunidades</li>
+          <li>▶ Estrategias virales</li>
+          <li>▶ Crisis management</li>
+          <li>▶ Social listening</li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-xl font-semibold mb-2 text-blue-500">Habilidades</h3>
+        <div class="flex flex-wrap gap-2">
+          <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full">Hootsuite</span>
+          <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full">Brandwatch</span>
+          <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full">TikTok</span>
+          <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full">Instagram</span>
+        </div>
+      </div>
+      <div class="col-span-2">
+        <h3 class="text-xl font-semibold mb-2 text-blue-500">Logros</h3>
+        <p class="text-gray-600">▶ +1M seguidores en 6 meses<br>▶ 92% sentimiento positivo</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="pabloDModal" class="modal-curriculum fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4">
+  <div class="curriculum-content relative max-w-2xl w-full bg-white rounded-2xl shadow-2xl p-8">
+    <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-500 hover:text-blue-600">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+      </svg>
+    </button>
+    <div class="flex items-center mb-6">
+      <img src="IMG-Equipo/tecnico-men-2.png" class="w-24 h-24 rounded-full mr-6 border-4 border-blue-100">
+      <div>
+        <h2 class="text-3xl font-bold text-blue-600">Pablo D</h2>
+        <p class="text-xl text-gray-600">Especialista en Marca</p>
+      </div>
+    </div>
+    <div class="grid grid-cols-2 gap-6">
+      <div>
+        <h3 class="text-xl font-semibold mb-2 text-blue-500">Experiencia</h3>
+        <ul class="space-y-2">
+          <li>▶ 8 años en branding corporativo</li>
+          <li>▶ Positioning estratégico</li>
+          <li>▶ Arquitectura de marca</li>
+          <li>▶ Storytelling visual</li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-xl font-semibold mb-2 text-blue-500">Habilidades</h3>
+        <div class="flex flex-wrap gap-2">
+          <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full">Adobe Creative</span>
+          <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full">Brand Guidelines</span>
+          <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full">Figma</span>
+          <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full">UX Writing</span>
+        </div>
+      </div>
+      <div class="col-span-2">
+        <h3 class="text-xl font-semibold mb-2 text-blue-500">Proyectos</h3>
+        <p class="text-gray-600">▶ Rediseño 5 marcas Fortune 500<br>▶ Sistema de diseño para startup</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Sistema de Modales Unificado -->
+<script>
+  const modalSystem = {
+    active: null,
+    open: function(modalId) {
+      this.closeAll();
+      this.active = document.getElementById(modalId);
+      this.active.classList.add('modal-active');
+      document.documentElement.style.overflow = 'hidden';
+      document.addEventListener('click', this.outsideClick);
+      document.addEventListener('keydown', this.escapeClose);
+    },
+    closeAll: function() {
+      document.querySelectorAll('.modal-curriculum').forEach(modal => {
+        modal.classList.remove('modal-active');
+      });
+      document.documentElement.style.overflow = 'auto';
+      document.removeEventListener('click', this.outsideClick);
+      document.removeEventListener('keydown', this.escapeClose);
+    },
+    outsideClick: function(event) {
+      if(event.target.classList.contains('modal-curriculum')) {
+        modalSystem.closeAll();
+      }
+    },
+    escapeClose: function(event) {
+      if(event.key === 'Escape') modalSystem.closeAll();
+    }
+  };
+
+  // Actualización de llamadas
+  function showModal(memberId) {
+    modalSystem.open(memberId + 'Modal');
+  }
+
+  function closeModal() {
+    modalSystem.closeAll();
+  }
+
+  // Gestión de equipos mejorada
+  document.querySelectorAll('[id^="mainImage"]').forEach(img => {
+    img.addEventListener('click', function() {
+      const teamLetter = this.id.slice(-1);
+      const grid = document.getElementById(`teamGrid${teamLetter}`);
+      grid.classList.toggle('hidden');
+      this.classList.toggle('scale-110');
+    });
+  });
+</script>
+
+  <!-- <script>
+    function toggleTeam(letter) {
+      const grid = document.getElementById(`teamGrid${letter}`);
+      const img = document.getElementById(`mainImage${letter}`);
+      grid.classList.toggle('hidden');
+      img.classList.toggle('expanded');
+      
+      // Scroll suave desactivado para imágenes secundarias
+    }
+
+    function showModal(id) {
+      document.getElementById(id + 'Modal').classList.add('modal-active');
+      document.body.style.overflow = 'hidden';
+      document.addEventListener('keydown', handleEscape);
+    }
+
+    function closeModal() {
+      document.querySelectorAll('.modal-curriculum').forEach(m => m.classList.remove('modal-active'));
+      document.body.style.overflow = 'auto';
+      document.removeEventListener('keydown', handleEscape);
+    }
+
+    function handleEscape(event) {
+      if (event.key === 'Escape') closeModal();
+    }
+
+    window.onclick = function(event) {
+      if (event.target.classList.contains('modal-curriculum')) closeModal();
+    }
+  </script>
+
+</body>
+</html> -->

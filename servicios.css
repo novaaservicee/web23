@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?famlily=Poppins:wght@400;500;600;700;800&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  background-color: snow;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+   background-color: snow;
+}
+.container{
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.header { 
+  transition: background-color 0.3s ease;
+ background-color: snow;
+  background-position: top center;
+  background-repeat: no-repeat;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center; 
+}
+.menu{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;  
+  border-bottom: 1px solid #ffffff29;
+}
+.logo {
+  color: darkslategray;
+  font-size: 25px;
+  font-weight: 800;
+}
+.menu .navbar ul li{
+  position: relative;
+  float: left; 
+}
+.menu .navbar ul li a{
+  font-size: 18px;
+  padding: 20px;
+  color: darkslategray; /*para el nabvar  background-color: darkgrey;*/
+  display: block;
+  background-color: snow; 
+   transition: background-color 0.3s ease; 
+}
+#menu{
+  display: none;  
+}
+.menu-icono{
+  width: 25px;
+}
+.menu label{
+  display: none;
+  cursor: pointer;
+}
+.header-info h1{
+  color: darkslategray;
+  text-transform: uppercase;
+  font-size: 70px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+.header-info p{
+  color: darkslategray;
+  font-size: 22px;
+  text-transform: capitalize;
+  margin-bottom: 35px;
+}
+.btn-1{
+  display: inline-block;
+  padding: 10px 35px;
+  border-radius: 10px;
+  background-color: #e45d34;
+  font-size: 20px;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+.btn-1:hover{
+  background-color: #e45d34;
+}
+.gym{
+  padding: 100px 0;
+  display: flex;
+  align-items: center;
+
+}
+
+.gym-1{
+  width: 50%;
+  padding-right: 150px;
+}
+.gym-1 h2{
+  font-size: 40px;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 35px;
+}
+.gym-1 p{
+  font-size: 16px;
+  color: #818181;
+  margin-bottom: 35px;
+}
+.gym-1 span{
+  color: darkslategray;
+}
+.btn-2{
+  display: inline-block;
+  padding: 8px 45px;
+  border-radius: 20px;
+  background-color: #e45d34;
+  font-size: 18px;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+.btn-2:hover{
+  background-color: #e45d34;
+}
+.img-1, .img-2{
+  margin-right: 30px;
+  width: 250px;    
+}
+.img-1{  
+  border-radius: 15%;
+  height: 300px;
+  width: 250px;
+}
+.img-2{
+  border-radius: 15%;
+  height: 300px;
+  width: 250px;
+}
+.footer{
+ 
+  padding: 50px 0;
+  display: flex;
+  justify-content: space-between;
+  background-color: snow;
+}
+.footer h3{
+  color: #e45d34;
+  font-size: 25px;
+  font-weight: 800;
+}
+.links ul{
+  display: flex;
+}
+.links ul li{
+  margin-right: 35px;
+}
+.links ul li a{
+  color: #818181;
+}
+@media(max-width:991px){
+    #menu:checked ~ .navbar ul li a {
+        background-color:  #fdb87d ; /* Fondo naranja cuando el menú hamburguesa está abierto */       
+    }
+  .menu{
+  padding: 20px;
+  }
+  .menu label{
+    display: initial;
+  }
+  .menu .navbar{
+    position: absolute;      
+    top: 100%;
+    left: 0;
+    right: 0;  
+    display: none;
+    }
+    .menu .navbar ul li{
+      width: 100%;      
+    }
+    #menu:checked ~ .navbar{
+      display: initial;
+    }
+    .header-content{
+      padding: 30px;
+    }
+  
+    .header-info h1{
+      font-size: 50px;
+      margin-bottom: 5px;
+    }
+    .gym{
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 30px;
+    }
+    .gym-1{
+      width: 100%;
+      padding: 0;
+      order: 1;
+    }
+    .gym-1 h2{
+      margin-bottom: 15px;
+    }
+  
+    .btn-2{
+      margin-bottom: 35px;
+    }
+    .gym-2{
+      order: 2;
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+    }
+    .img-1, .img-2{
+      margin: 0 0 20px 0;
+  
+    }
+    .footer{
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .footer h3{
+      margin-bottom: 15px;
+    }
+    .links ul li{
+      margin: 0 10px;
+    }
+  
+}

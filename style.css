@@ -1,0 +1,387 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;   
+}
+body {
+    font-family: 'Poppins', sans-serif; 
+    background-color: snow;   
+}
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.header{
+    display: flex;
+    position: relative;
+}
+.menu{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;  
+    z-index: 1000;  
+}
+.logo{
+    color: darkslategray;
+    font-size: 25px;
+    font-weight: 800;
+}
+.menu .navbar  ul li{
+    position: relative;
+    float: left;
+}
+.menu .navbar  ul li a{
+    font-size: 18px;
+    padding: 20px;
+    color: darkslategray;
+    display: block;
+    font-weight: 600;
+}
+.menu .navbar  ul li a:hover{
+    color: #7e7674;
+}
+#menu{
+    display: none;    
+}
+.menu-icono{
+    width: 40px;
+}
+.menu label{
+    cursor: pointer;
+    display: none;
+}
+.submenu{
+    position: relative;
+}
+.submenu #carrito{
+    display: none;
+}
+.submenu:hover #carrito{
+    display: block;
+    position: absolute;
+    right: 0;
+    backdrop-filter: blur(10px);
+    top: 100%;
+    z-index: 1;
+    background-color: #4E4b5076;
+    padding: 20px;
+    min-height: 150px;
+    min-width: 400px;
+}
+table{
+    width: 100%;    
+}
+th{
+    color: darkslategray; 
+}
+td{
+    color: darkslategray;
+}
+.borrar{
+    background-color: #e45d34;
+    border-radius: 50%;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: darkslategray;
+    font-weight: 800;
+}
+.header-content{
+    position: relative;
+    text-align: center;
+    margin-top: 300px;
+}
+.header-content h1{
+    font-size: 70px;
+    color: darkslategray;
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+.header.header-content p{
+    font-size: 18px;
+    padding: 0 200px;
+    color: #8b7e7b;
+    margin-bottom: 80px;    
+}
+.botons{
+    display: flex;
+    justify-content: center;
+}
+.btn-1{
+    display: inline-block;
+    width: 200px;
+    margin: 0 10px;
+    padding: 13px 0;
+    border-radius: 25px;
+    color: #dfdde0;
+    text-transform:uppercase ;
+    background-color: #e45d34;
+}
+.btn-1:hover{
+    background-color: #c23b11;
+}
+.socials-1{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 0;
+}
+.socials-1 img{
+    width: 20px;
+    height: 20px;
+    margin-bottom: 20px;
+}
+.arrow{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 150px;
+}
+.recetas{
+    display: flex;
+    padding: 120px 0;
+}
+.recetas-1{
+    width: 50%;
+}
+.recetas-1 h3{
+    font-size: 18px;
+    color: #7e7674;
+}
+.recetas-1 p{
+    color: #e45d34;
+}
+.recetas-1 hr{
+    margin: 10px;
+    border: 1px solid #312f32;
+}
+.recetas-2{
+    width: 50%;
+    text-align: center;
+    color: darkslategray;
+}
+.recetas-2 h2{
+    font-size: 55px;
+    line-height: 55px;
+    color: darkslategray;
+}
+.platillos{
+    padding: 50px 0;    
+}
+.swiper{
+    width: 100%;
+    height: 100%;
+}
+.swiper-slide{
+    text-align: center;
+    padding-bottom: 80px;
+}
+.swiper-button-prev::after{
+    font-size: 25px;
+}
+.swiper-button-next::after{
+    font-size: 25px;
+}
+.swiper-button-prev{
+    color: #e45d34;
+}
+.swiper-button-next{
+    color: #e45d34;
+}
+.swiper-pagination-bullet{
+    background-color: #dfdde0;
+    opacity: 1;
+    top: 50px;    
+}
+.swiper-pagination-bullet-active{
+    background-color: #e45d34;
+}
+.platillo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 50px;
+}
+.platillo h3{
+    font-size: 16px;
+    color: darkslategray;
+    margin-bottom: 10px;
+}
+.precio{
+    font-size: 18px;
+    color: darkslategray;  
+}
+.platillo img{
+    width: 200px;
+    height: 190px;
+    border-radius: 50%;
+}
+.platillo p{
+    font-size: 16px;
+    color: darkslategray;
+    margin-top: 15px;
+}
+.btn-2{
+    display: block;
+    padding: 8px 15px;
+    background-color: #e85123;
+    color: #dfdde0;
+    font-size: 14px;
+    margin-top: 25px;
+    border-radius: 25px;
+}
+.btn-2:hover{
+    background-color: #c23b11;
+}
+.c1, .c2{
+    color: #8d7e7b !important;
+}
+.btn-3{
+    display: inline-block;
+    background-color: #c23b11 ;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 25px;
+   margin-top: 25px;
+   border: 1px solid #dfdde0;   
+}
+
+.footer{
+    padding-bottom: 50px;
+}
+.links{
+    display: flex;
+    color: #dfdde0; 
+}
+.btn-3:hover{
+    color: wheat;
+}
+.link{
+    width: 25%;
+}
+.link h3{
+    font-size: 20px;
+    color: darkslategray;
+    margin-bottom: 20px;
+}
+.link p{
+    color: darkslategray;
+    font-size: 14px;
+    margin: o 50px 15px 0;
+}
+.link ul li a{
+    display: inline-block;
+    font-size: 16px;
+    color: darkslategray;
+    margin-bottom: 10px;
+}
+.socials-2 img{
+    width: 20px;
+    height: 20px;
+}
+.link form{
+    display: flex;
+    flex-direction: column;
+}
+.inp{
+    margin-bottom: 15px;
+    padding: 8px 15px;
+    border-radius: 10px;
+    outline: none;
+}
+.btn-4{
+    padding: 8px 15px;
+    border-radius: 10px;
+
+    color: darkslategray;
+    border: 0;
+    color: darkslategray;
+}
+@media(max-width: 991px){
+    .menu{
+        padding: 30px;
+    }
+    .menu label{
+        display: initial;
+    }
+    .menu .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #fdb87d ;
+        display: none;
+    }
+    
+    .logo{
+        display: none;
+    }
+    .menu .navbar ul li{
+        width: 100%;
+    }
+
+    #menu:checked ~ .navbar{
+        display: initial;
+    }
+    .header-content{
+        flex-direction: column;
+        padding: 30px;
+        margin-top: 120px;
+    }
+    .header-content h1{
+        font-size: 40px;
+    }
+    .header-content p{
+        padding: 0;
+        margin-bottom: 40px;
+    }
+    .botons{
+        flex-direction: column;
+        align-items: center;
+    }
+    .btn-1{
+        margin: 0 0 20px 0;
+    }
+    .socials-1{
+        display: none;
+    }
+    .arrow{
+        display: none;
+    }
+    .recetas{
+        flex-direction: column;
+        padding:0 30px;
+        text-align: center;
+    }
+    .recetas-1{
+        width: 100%;
+        margin-bottom: 25px;
+    }
+    .recetas-2{
+        width: 100%;
+    }
+    .footer{
+        padding: 30px;
+    }
+    .links{
+        flex-direction: column;
+        align-items: center;            
+        text-align: center;            
+    }
+    .link{
+        width: 400px;
+             
+    }
+    .link p{
+        margin: 0 0 25px 0;
+    }
+    .socials-1{
+        margin-bottom: 15px;
+    }
+}
